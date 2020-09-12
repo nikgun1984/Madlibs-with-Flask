@@ -3,7 +3,7 @@
 {% block head%} Madlibs {%endblock%}
 
 {% block content%}
-  <form action="/your_story/{{val}}">
+  <form action="/your_story/{{val}}" name="form" id="form">
       {% for word in words%}
         <label for="{{word}}">{{word.upper()}}</label>
         <input type="text" id="{{word}}" name="{{word}}">

@@ -20,7 +20,7 @@ input[type=text], select {
     display: inline-block;
   }
   
-  input[type=submit] {
+  input[type=submit], button {
     width: 50%;
     background-color: #4CAF50;
     color: white;
@@ -33,4 +33,8 @@ input[type=text], select {
   
   input[type=submit]:hover {
     background-color: #45a049;
+  }
+
+  p{
+      font-size: 25px;
   }
