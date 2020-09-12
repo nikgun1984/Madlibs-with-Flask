@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+{% block head%} Main Page {%endblock%}
+
+{% block content%}
+  <h1>CREATE YOUR STORY</h1>
+  <h2>Instructions</h2>
+  <p>Using the form below, please adhere to the following rules:
+      <div class="center">
+        <ol>
+            <li class="hr"> 1. Write an entire story inside the text box.
+            </li>
+            <li class="hr">2. For words you want to omit, add square brackets [ ]
+            </li>
+            <li>
+                <em>EXAMPLE:</em> Once upon a time there lived a(n) [ ]
+            </li>
+            <li class="hr">3. Add descriptive word for omitted word inside the 
+                square brackets.
+            </li>
+            <li>
+                <em>EXAMPLE:</em> Once upon a time there lived a <em>[person]</em>
+                <em>NOTE:</em> It can be any descriptive word.
+            </li>
+            <li class="hr">4. Submit the form and select your newly created story in
+                "CHOOSE STORY" menu.
+            </li>
+        </ol>
+      </div>
+  </p>
+  <p>ENJOY!!!</p>
+  <form action="">
+    <textarea id="w3review" name="w3review" rows="10" cols="60"></textarea>
+    <input type="submit" value="CREATE STORY">
+  </form>
+{%endblock%}

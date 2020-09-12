@@ -8,6 +8,14 @@ app.config["SECRET_KEY"] = 'whateverpassword'
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 
 @app.route('/')
+def main_page():
+    return render_template('main.html')
+
+@app.route('/create_story')
+def create_story():
+    return render_template('create_story.html')
+
+@app.route('/choose_story')
 def madlibs_select():
     titles = tales
     return render_template('index.html', titles=titles)
