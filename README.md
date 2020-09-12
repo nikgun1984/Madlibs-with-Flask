@@ -5,6 +5,6 @@ in a story before reading aloud. The game is frequently played as a party game o
 
 -Dynamically added inputs for stories
 -Able to choose template
--Flask/Python/CSS/HTML
+-Flask/Python/CSS/HTML/Javascript/jQuery
 
 https://en.wikipedia.org/wiki/Mad_Libs
