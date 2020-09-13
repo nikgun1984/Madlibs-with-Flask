@@ -1,0 +1,67 @@
+{
+    "Once Upon a time...": {
+        "prompts": [
+            "place",
+            "adjective",
+            "noun",
+            "verb",
+            "plural_noun"
+        ],
+        "template": "Once upon a time in a long-ago {place}, there lived a large {adjective} {noun}. He loved to {verb} {plural_noun}."
+    },
+    "Halloween Story": {
+        "prompts": [
+            "weather",
+            "name_town",
+            "costume",
+            "costume_2",
+            "costume_2",
+            "character",
+            "greeting",
+            "adjective",
+            "character",
+            "place",
+            "candy",
+            "candy_2"
+        ],
+        "template": "On a {weather} Halloween in the town of {name_town}, I was going to go trick or treating. I decided to dress up as a {costume} but everyone thought I would scare people, so I decide to dress up as a {costume_2} instead. My {costume_2} costume was done to perfection and I looked great. The first door I knocked on turned out to be the home of {character}. I opened the door and said, \"{greeting}\". I tried to utter the words, \"trick or treat\" but I was very {adjective}. {character} said, \"come in\". I said, no way and ran as fast as I could for the {place}. I didn't get any {candy} or {candy_2} for Halloween that year."
+    },
+    "Gingerbread": {
+        "prompts": [
+            "plural_noun",
+            "person",
+            "adjective",
+            "noun",
+            "adjective_2",
+            "adjective_3",
+            "adjective_4",
+            "color",
+            "body_part",
+            "body_part_2",
+            "clothing"
+        ],
+        "template": "Gingerbread {plural_noun}, which are usually shaped like a {person} are a popular Christmas treat. Ginger is {adjective} {noun} that gives gingerbread its {adjective_2} flavor. Molasses is a {adjective_3} ingredient that gives the cookies their traditional dark {adjective_4} color. After baking, decorate using {color},frosting to draw {body_part}, {body_part_2}, and {clothing} onto the gingerbread people."
+    },
+    "Mark Story": {
+        "prompts": [
+            "occupation",
+            "name",
+            "adjective",
+            "a quantity",
+            "noun",
+            "noun",
+            "active verb"
+        ],
+        "template": "Once upon a time, there lived a {occupation} named {name}. He lived a {adjective}  life with {a quantity} {noun}. One day, he saw a {noun} {active verb} down the street."
+    },
+    "Rainy Day": {
+        "prompts": [
+            "person",
+            "place",
+            "item",
+            "adjective",
+            "participle"
+        ],
+        "template": "Today it was raining all day. {person} came to my {place} and delivered {item}. I was so {adjective} and could not stop {participle}."
+    }
+}

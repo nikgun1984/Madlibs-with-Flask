@@ -1,12 +1,11 @@
 const form = $('#form');
 form.on('submit',checkData);
 
-function checkData(e){
+function checkData(){
     const allInputs = $("[type=text]");
     const fields = [];
     let not_empty_check = 0;
     let lessThan3Chars = 0;
-    let isUpper = false;
     for(let i=0;i<allInputs.length;i++){
         fields.push(allInputs[i].name);
     }

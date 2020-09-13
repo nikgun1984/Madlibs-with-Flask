@@ -8,29 +8,31 @@
   <p>Using the form below, please adhere to the following rules:
       <div class="center">
         <ol>
-            <li class="hr"> 1. Write an entire story inside the text box.
+            <li class="hr"> 1. Enter the title of your story</li>
+            <li class="hr"> 2. Write an entire story inside the text box.
             </li>
-            <li class="hr">2. For words you want to omit, add square brackets [ ]
-            </li>
-            <li>
-                <em>EXAMPLE:</em> Once upon a time there lived a(n) [ ]
-            </li>
-            <li class="hr">3. Add descriptive word for omitted word inside the 
-                square brackets.
+            <li class="hr">3. For words you want to omit, add curly brackets { }
             </li>
             <li>
-                <em>EXAMPLE:</em> Once upon a time there lived a <em>[person]</em>
+                <em>EXAMPLE:</em> Once upon a time there lived a(n) { }
+            </li>
+            <li class="hr">4. Add descriptive word for omitted word inside the 
+                curly brackets.
+            </li>
+            <li>
+                <em>EXAMPLE:</em> Once upon a time there lived a <em>{person}</em>
                 <em>NOTE:</em> It can be any descriptive word.
             </li>
-            <li class="hr">4. Submit the form and select your newly created story in
+            <li class="hr">5. Submit the form and select your newly created story in
                 "CHOOSE STORY" menu.
             </li>
         </ol>
       </div>
   </p>
   <p>ENJOY!!!</p>
-  <form action="">
-    <textarea id="w3review" name="w3review" rows="10" cols="60"></textarea>
-    <input type="submit" value="CREATE STORY">
+  <form action="" method="POST">
+      <input type="text" name="title" id="title" placeholder="Enter the title of the story" required>
+      <textarea id="story" name="story" rows="10" cols="60" placeholder="Your story goes here..." required></textarea>
+      <input type="submit" value="CREATE STORY">
   </form>
 {%endblock%}

@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request
 from flask_debugtoolbar import DebugToolbarExtension
-from stories import tales
+from utility import append_data,load_data
 
 app = Flask(__name__)
 
 app.config["SECRET_KEY"] = 'whateverpassword'
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
+tales = load_data()
 
 @app.route('/')
 def main_page():
@@ -15,8 +16,17 @@ def main_page():
 def create_story():
     return render_template('create_story.html')
 
+@app.route('/create_story', methods=['POST'])
+def post_story():
+    title = request.form["title"]
+    story = request.form["story"]
+    append_data(title,story)
+    return render_template('main.html')
+
 @app.route('/choose_story')
 def madlibs_select():
+    global tales
+    tales = load_data()
     titles = tales
     return render_template('index.html', titles=titles)
 
