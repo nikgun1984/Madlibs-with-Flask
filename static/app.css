@@ -83,9 +83,7 @@ ol{
     display: block;
 }
 
-/* .hr:after {
-    content: '';
-    display: block;
-    border-top: 2px solid #45a049;
-    margin-top: 0.5em;
-} */
+.highlight
+{
+    border: 1px solid red !important;
+}

@@ -1,34 +1,82 @@
-const form = $('#form');
-form.on('submit',checkData);
+const storyForm = $('#form');
+const createStoryForm = $('#create');
+storyForm.on('submit',areInputsValid);
+createStoryForm.on('submit',isCreateStoryFormValid);
 
-function checkData(){
-    const allInputs = $("[type=text]");
-    const fields = [];
-    let not_empty_check = 0;
-    let lessThan3Chars = 0;
-    for(let i=0;i<allInputs.length;i++){
-        fields.push(allInputs[i].name);
-    }
-
-    let i, l = fields.length;
-    let fieldname;
-    for (i = 0; i < l; i++) {
-        fieldname = fields[i];
-        const val = document.forms["form"][fieldname].value;
-        if ( val!= "") {
-            not_empty_check += 1;
+function areInputsValid() {
+    let isFormValid = true,
+        isNoLessThan3 = true,
+        warning1, warning2;
+    $("#form input").each(function(){
+        if (!$.trim($(this).val()).length){
+            warning1 = 'Please fill up all the input fields...'
+            isFormValid = isOn($(this),isFormValid);
         }
-        if (val.length>=3) {
-            lessThan3Chars += 1;
+        else{
+            $(this).removeClass("highlight");
         }
+
+        if ($.trim($(this).val()).length < 3 && $.trim($(this).val()).length){
+            warning2 = 'Secret word should be at least 3 characters...'
+            isNoLessThan3 = isOn($(this),isNoLessThan3);
+        }
+        else{
+            $(this).removeClass("highlight");
+        }
+        });
+
+        if (!isFormValid) { 
+            alert(warning1);
+        }
+
+        if (!isNoLessThan3) { 
+            alert(warning2);
+        }
+
+    return isFormValid && isNoLessThan3;
+}  
+
+function isCreateStoryFormValid() {
+    let isTitleValid = true,
+        isTextAreaValid = true,
+        warning1,warning2;
+    //Checking title input if it is empty
+    const title = $('input#title').val();
+    if(!$.trim(title).length) {
+        warning1 = "Please add your story title..."
+        isTitleValid = isOn($('input#title'),isTitleValid);
+    } else {
+        $('input#title').removeClass("highlight");
+    }
+    // Checking the textarea if it is empty or no secret words input
+    const textArea = $('textarea').val();
+    const regexp = /(?!=\{)\w+[\s\w+]*(?=\})/g;
+    arr = textArea.match(regexp) || [];
+    if(!arr.length && $.trim(textArea).length){
+        warning2 = "Please enter at least one secret word..."
+        isTextAreaValid = isOn($('textarea'),isTextAreaValid);
+    } else if(!$.trim(textArea).length || textArea == '') {
+        warning2 = "Text area is empty..."
+        isTextAreaValid = isOn($('textarea'),isTextAreaValid);
+    } else {
+        $('textarea').removeClass("highlight");
     }
 
-    if(not_empty_check < l) {
-        alert("Some fields are missing...");
-        e.preventDefault();
+    // Make a warning if wrong or no input
+    if(!isTextAreaValid) {
+        alert(warning2);
     }
-    else if(lessThan3Chars < l){
-        alert("Some fields should be at least 3 characters long...");
-        e.preventDefault();
+
+    if(!isTitleValid) {
+        alert(warning1);
     }
+    return isTextAreaValid && isTitleValid;
+}
+
+/* this will return boolean if input is invalid which is false*/
+function isOn(input,isInputValid){
+    input.addClass("highlight");
+    isInputValid = false;
+    input.focus();
+    return isInputValid;
 }
