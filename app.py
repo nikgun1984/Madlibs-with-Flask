@@ -21,7 +21,7 @@ def post_story():
     title = request.form["title"]
     story = request.form["story"]
     append_data(title,story)
-    flash("Story was created...")
+    flash("Story was created...","success")
     return redirect('/')
 
 @app.route('/choose_story')

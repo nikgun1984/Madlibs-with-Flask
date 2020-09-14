@@ -74,5 +74,24 @@
             "verb_3"
         ],
         "template": "Today was the day {character} wanted to {verb} {noun}. {character} decided to {verb_2} and {verb_3} the weather."
+    },
+    "sjkdn": {
+        "prompts": [
+            "kjdsvnk",
+            "cskjdnb"
+        ],
+        "template": "{kjdsvnk} ckams cskdn {cskjdnb}"
+    },
+    "lksdnvlk": {
+        "prompts": [
+            "nksjdnv"
+        ],
+        "template": "{nksjdnv} kcnosmd csdjnvk"
+    },
+    "dff": {
+        "prompts": [
+            "nksjd"
+        ],
+        "template": "lxkkdn {nksjd}"
     }
 }

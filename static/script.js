@@ -80,3 +80,8 @@ function isOn(input,isInputValid){
     input.focus();
     return isInputValid;
 }
+
+/*message will disappear after few seconds*/
+$(document).ready(function(){
+    $(".flash").delay(2000).slideUp(300);
+});

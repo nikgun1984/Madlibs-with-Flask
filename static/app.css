@@ -87,3 +87,13 @@ ol{
 {
     border: 1px solid red !important;
 }
+
+.messages{
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.success{
+    background-color: rgba(0,255,0,0.1);
+    font-size: 2rem;
+}
