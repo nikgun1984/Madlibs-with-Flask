@@ -3,6 +3,9 @@
 {% block head%} Main Page {%endblock%}
 
 {% block content%}
+  {%for msg in get_flashed_messages()%}
+  <h3>{{msg}}</h3>
+  {% endfor %}
   <a href="/choose_story"><h1 class="main">CHOOSE STORY</h1></a>
   <a href="/create_story"><h1 class="main">CREATE YOUR STORY</h1></a>
 {%endblock%}

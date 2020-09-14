@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, flash
 from flask_debugtoolbar import DebugToolbarExtension
 from utility import append_data,load_data
 
@@ -21,14 +21,15 @@ def post_story():
     title = request.form["title"]
     story = request.form["story"]
     append_data(title,story)
-    return render_template('main.html')
+    flash("Story was created...")
+    return redirect('/')
 
 @app.route('/choose_story')
 def madlibs_select():
     global tales
     tales = load_data()
     titles = tales
-    return render_template('index.html', titles=titles)
+    return render_template('choose_story.html', titles=titles)
 
 @app.route('/form')
 def madlibs_form():

@@ -63,5 +63,16 @@
             "participle"
         ],
         "template": "Today it was raining all day. {person} came to my {place} and delivered {item}. I was so {adjective} and could not stop {participle}."
+    },
+    "Beautiful Day in Miami": {
+        "prompts": [
+            "character",
+            "verb",
+            "noun",
+            "character",
+            "verb_2",
+            "verb_3"
+        ],
+        "template": "Today was the day {character} wanted to {verb} {noun}. {character} decided to {verb_2} and {verb_3} the weather."
     }
 }
