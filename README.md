@@ -8,3 +8,9 @@ in a story before reading aloud. The game is frequently played as a party game o
 -Flask/Python/CSS/HTML/Javascript/jQuery
 
 https://en.wikipedia.org/wiki/Mad_Libs
+
+<p align="center">
+  <img src="/static/images/1.png" width="500" title="hover text">
+  <img src="/static/images/2.png" width="500" title="hover text">
+  <img src="/static/images/3.png" width="500" title="hover text">
+</p>
